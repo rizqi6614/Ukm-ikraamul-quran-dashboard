@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Amiri", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* =====================================================================
+   PROFESSIONAL POLISH DESIGN THEME RULES
+   ===================================================================== */
+
+body {
+  background-color: #f8fafc !important; /* bg-slate-50 */
+  color: #0f172a !important; /* text-slate-900 */
+}
+
+/* Custom styles for high-fidelity interactive elements */
+.islamic-card {
+  background-color: #ffffff !important;
+  border: 1px solid #ebd49430 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03) !important;
+  color: #1e293b !important;
+  border-radius: 1rem !important; /* rounded-2xl */
+}
+
+.gold-border {
+  border-color: #d97706 !important; /* elegant deep gold */
+}
+
+.gold-text {
+  color: #b45309 !important; /* legible amber-700 / gold text */
+}
+
+.gold-bg {
+  background-color: #e5c158 !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Global Content-Wide Re-theming Overrides */
+main {
+  color: #1e293b !important;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* Map neutral background fields to white-gray professional shades */
+main .bg-\[\#011a14\], 
+main .bg-\[\#01110c\], 
+main .bg-\[\#021811\], 
+main .bg-\[\#01140f\], 
+main .bg-\[\#021a14\], 
+main .bg-\[\#011e16\], 
+main .bg-\[\#02140f\],
+main .bg-\[\#02130e\],
+main .bg-\[\#021811\],
+main .bg-emerald-950:not(aside *),
+main .bg-emerald-900:not(aside *) {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important; /* border-slate-200 */
+  color: #1e293b !important;
+}
+
+/* Re-theme color elements within main viewport safely */
+main .text-gray-100, 
+main .text-zinc-100, 
+main .text-white,
+main .text-emerald-100,
+main .text-yellow-100 {
+  color: #0f172a !important;
+}
+
+main .text-gray-200, 
+main .text-zinc-200, 
+main .text-slate-200 {
+  color: #334155 !important; /* text-slate-700 */
+}
+
+main .text-gray-300, 
+main .text-[#e5c158],
+main .text-[#e5c155],
+main .text-zinc-300, 
+main .text-slate-300,
+main .text-emerald-300,
+main .text-emerald-400 {
+  color: #475569 !important; /* text-slate-600 */
+}
+
+main .text-emerald-500,
+main .text-yellow-500,
+main .text-yellow-600 {
+  color: #047857 !important; /* Emerald 700 */
+}
+
+main .text-gray-400, 
+main .text-slate-400,
+main .text-zinc-400 {
+  color: #64748b !important; /* text-slate-500 */
+}
+
+main .text-emerald-600,
+main .text-[#34d399] {
+  color: #059669 !important;
+}
+
+/* Text area and inputs */
+main input, 
+main select, 
+main textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #cbd5e1 !important; /* slate-300 */
+}
+
+main input:focus, 
+main select:focus, 
+main textarea:focus {
+  border-color: #059669 !important; /* emerald focus */
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.1) !important;
+}
+
+/* Tab buttons inside main panels */
+main .bg-\[\#063b2a\],
+main .bg-emerald-900\/40,
+main .bg-[#063324] {
+  background-color: #e2e8f0 !important; /* neat light gray style */
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Table overrides inside the main container */
+main table thead,
+main thead.bg-\[\#021811\] {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+}
+
+main table tr {
+  border-bottom-width: 1px !important;
+  border-bottom-color: #e2e8f0 !important;
+}
+
+main table td {
+  color: #334155 !important;
+}
+
+/* Pre / SQL print/code blocks matching design */
+main pre {
+  background-color: #1e293b !important; /* keep code blocks dark/clean for high contrast */
+  color: #34d399 !important;
+  border-color: #334155 !important;
+}
+
+/* Dialogue modals layout overrides */
+main .fixed.inset-0.bg-\[\#020d0ad0\] {
+  background-color: rgba(15, 23, 42, 0.5) !important; /* nice translucent backdrop */
+}
+
+main .fixed.inset-0.bg-\[\#020d0ad0\] > div.bg-\[\#032117\] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Modal Popup & Element Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}

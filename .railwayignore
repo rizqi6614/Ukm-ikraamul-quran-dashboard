@@ -1,0 +1,3 @@
+# Ignore heavy downloads (APK) folder for Railway CLI upload
+# The APK files are already committed and managed via Git/GitHub
+public/downloads/

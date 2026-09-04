@@ -1,0 +1,6 @@
+{
+  "name": "UKM Ikraamul Qur'an Dashboard",
+  "description": "Dashboard digital UKM Ikraamul Qur'an dengan UI Dark Islamic, peta kegiatan, presensi QR + GPS, statistik hafalan, dan asisten AI Islami.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
