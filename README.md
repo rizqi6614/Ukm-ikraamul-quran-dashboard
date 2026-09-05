@@ -1,119 +1,102 @@
-# 📖 UKM iKRAAMUL QUR'AN — Digital Dashboard
+<div align="center">
 
-Dashboard manajemen digital untuk UKM Ikraamul Qur'an, dibangun dengan React + Express.js + MySQL.
+  <img src="public/logo-iq.png" alt="Logo UKM Ikraamul Qur'an" width="120" />
 
-## ✨ Fitur Utama
+  # 📖 UKM iKRAAMUL QUR'AN
+  ### **Digital Smart Dashboard & Islamic Learning Management System**
 
-- 🔐 **Autentikasi** — Login & Registrasi anggota
-- 📊 **Dashboard Overview** — Statistik, grafik, dan leaderboard
-- 👥 **Manajemen Anggota** — CRUD data anggota UKM
-- 📅 **Manajemen Kajian** — Jadwal & manajemen kegiatan
-- ✅ **Presensi GPS & QR** — Absensi berbasis lokasi dan QR Code
-- 📖 **Setoran Hafalan** — Rekap hafalan Al-Qur'an per anggota
-- 🏆 **Poin Berkah & Reward** — Gamifikasi dan penukaran hadiah
-- 🤖 **AI Chat (Gemini)** — Asisten AI berbasis Google Gemini
+  [![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+  [![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+  [![Google Gemini](https://img.shields.io/badge/Google_Gemini-AI_Assistant-8E75C2?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com/)
 
-## 🛠️ Tech Stack
+  <p align="center">
+    Platform Manajemen Digital Modern untuk Kegiatan UKM Ikraamul Qur'an.<br>
+    Dilengkapi Presensi Geolocation & QR Code, Setoran Hafalan, Poin Gamifikasi, Laporan Keuangan Kas, dan AI Islami.
+  </p>
 
-| Layer | Teknologi |
-|---|---|
-| Frontend | React 19 + TypeScript + Vite |
-| Styling | TailwindCSS v4 |
-| Backend | Express.js (Node.js) |
-| Database | MySQL 8 / MariaDB (fallback: JSON file) |
-| AI | Google Gemini API (`@google/genai`) |
-| Charts | Recharts |
-
-## 🚀 Cara Menjalankan Lokal
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/YOUR_USERNAME/ukm-ikraamul-quran-dashboard.git
-cd ukm-ikraamul-quran-dashboard
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Setup Environment Variables
-```bash
-cp .env.example .env
-```
-Isi file `.env` dengan konfigurasi:
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-PORT=3000
-NODE_ENV=development
-
-# Opsional — jika pakai MySQL
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=ikraamul_quran_db
-```
-
-### 4. Jalankan Development Server
-```bash
-npm run dev
-```
-Buka http://localhost:3000
-
-## 🌐 Deploy ke Railway
-
-1. Push ke GitHub
-2. Buka [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub**
-3. Pilih repository ini
-4. Tambahkan **MySQL Plugin** dari Railway dashboard
-5. Set environment variables di Settings → Variables:
-   - `GEMINI_API_KEY`
-   - `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` (dari Railway MySQL)
-   - `NODE_ENV=production`
-6. Railway otomatis menjalankan `npm run start`
-
-## 📋 Scripts
-
-| Command | Deskripsi |
-|---|---|
-| `npm run dev` | Jalankan server development |
-| `npm run build` | Build production (frontend + backend) |
-| `npm run start` | Jalankan server production |
-| `npm run lint` | TypeScript type check |
-
-## 🗄️ Database
-
-Aplikasi mendukung dua mode database:
-- **MySQL** — Set variabel `DB_HOST`, `DB_USER`, `DB_NAME`, `DB_PASSWORD`
-- **JSON Fallback** — Otomatis digunakan jika variabel DB tidak diset, data disimpan di `database_store.json`
-
-Schema SQL tersedia di `databaseikra.sql`
-
-## 📁 Struktur Project
-
-```
-├── src/
-│   ├── components/     # React components
-│   ├── types.ts        # TypeScript types
-│   └── App.tsx         # Root component
-├── public/             # Static assets
-├── server.ts           # Express backend server
-├── vite.config.ts      # Vite configuration
-├── .env.example        # Template environment variables
-└── package.json
-```
-
-## 🔑 Login Default
-
-| Email | Role |
-|---|---|
-| `rizqielektronika@gmail.com` | Admin |
-| `ahmad@gmail.com` | Pengurus |
-| `zuhair@gmail.com` | Anggota |
-
-> Password: masukkan email yang sama (tidak ada validasi password di mode demo)
+</div>
 
 ---
 
-Dibuat dengan ❤️ untuk UKM iKRAAMUL QUR'AN
+## 🌟 Fitur Utama Website
+
+| Fitur | Deskripsi |
+| :--- | :--- |
+| 🔐 **Sistem Autentikasi 3 Role** | Hak akses berjenjang untuk **Admin**, **Pengurus**, dan **Anggota**. |
+| 📊 **Dashboard Analitik** | Visualisasi statistik kehadiran, rekap setoran hafalan, dan leaderboard santri. |
+| 📍 **Presensi GPS & QR Code** | Validasi kehadiran presisi berbasis radius geolokasi GPS dan scan QR Code dinamis. |
+| 📖 **Setoran Hafalan Al-Qur'an** | Pencatatan juz, nama surah, rentang ayat, dan status verifikasi ustadz/pembina. |
+| 🏆 **Poin Berkah & Reward** | Gamifikasi XP & Level anggota (Mubtadi' s/d Hafidz) dengan katalog penukaran hadiah. |
+| 💰 **Laporan Keuangan & Kas** | Pencatatan transaksi pemasukan, pengeluaran kas, serta donasi QRIS digital. |
+| 🤖 **Asisten AI Islami (Gemini)** | Tanya jawab seputar tajwid, tafsir Al-Qur'an, dan fiqih dengan Google Gemini AI. |
+| 📄 **Export Laporan PDF** | Cetak rekapitulasi data anggota, presensi, dan setoran hafalan ke dokumen PDF resmi. |
+
+---
+
+## 📸 Preview Galeri Kegiatan
+
+<div align="center">
+  <img src="public/gallery/kegiatan-1.jpg" width="48%" style="border-radius: 8px; margin: 4px;" />
+  <img src="public/gallery/kegiatan-2.jpg" width="48%" style="border-radius: 8px; margin: 4px;" />
+</div>
+
+---
+
+## 🛠️ Arsitektur & Teknologi
+
+* **Frontend:** React 19, TypeScript, Vite, TailwindCSS v4, Lucide Icons, Motion Animations, Recharts.
+* **Backend:** Node.js, Express.js (REST API).
+* **Database:** MySQL 8 / MariaDB Cloud (TiDB Cloud / Aiven) dengan Fallback JSON Store.
+* **AI Engine:** Google Gemini API (`@google/genai`).
+
+---
+
+## 🚀 Cara Menjalankan di Lokal (Development)
+
+1. **Clone repository:**
+   ```bash
+   git clone https://github.com/rizqi6614/Ukm-ikraamul-quran-dashboard.git
+   cd Ukm-ikraamul-quran-dashboard
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Buat file `.env`:**
+   ```env
+   PORT=3000
+   NODE_ENV=development
+   GEMINI_API_KEY=your_gemini_api_key_here
+   DB_HOST=gateway01.ap-southeast-1.prod.aws.tidbcloud.com
+   DB_PORT=4000
+   DB_USER=37hi9DKVA7wo4KQ.root
+   DB_PASSWORD=your_password
+   DB_NAME=test
+   ```
+
+4. **Jalankan server:**
+   ```bash
+   npm run dev
+   ```
+   Buka browser di `http://localhost:3000`.
+
+---
+
+## 🔑 Akun Login Bawaan (Demo)
+
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Admin** | `rizqielektronika@gmail.com` | `rizqielektronika@gmail.com` |
+| **Pengurus** | `ahmad@gmail.com` | `ahmad@gmail.com` |
+| **Anggota** | `zuhair@gmail.com` | `zuhair@gmail.com` |
+
+---
+
+<div align="center">
+  <sub>Dibuat dengan ❤️ untuk kemaslahatan umat & kemajuan <b>UKM iKRAAMUL QUR'AN</b></sub>
+</div>
