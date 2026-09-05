@@ -295,17 +295,22 @@ const useMySQL = !!(process.env.DB_HOST && process.env.DB_USER && process.env.DB
 let pool: mysql.Pool | null = null;
 
 if (useMySQL) {
+  const isCloudDB = process.env.DB_HOST?.includes("tidbcloud.com") ||
+                    process.env.DB_HOST?.includes("aivencloud.com") ||
+                    process.env.DB_SSL === "true";
+
   pool = mysql.createPool({
     host: process.env.DB_HOST,
     port: Number(process.env.DB_PORT || 3306),
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+    ssl: isCloudDB ? { minVersion: "TLSv1.2", rejectUnauthorized: true } : undefined,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
   });
-  console.log(`[Database] MySQL Connection Pool created for host: ${process.env.DB_HOST}`);
+  console.log(`[Database] MySQL Connection Pool created for host: ${process.env.DB_HOST} (SSL: ${isCloudDB ? 'Enabled' : 'Disabled'})`);
 } else {
   console.log("[Database] Using JSON file storage (fallback mode).");
 }
